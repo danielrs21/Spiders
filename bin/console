@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+define('MAX_FILE_SIZE', 6000000);
+
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ .'/../src/Spiders/Config/Register.php';
+
+const SHAREASALE_FILES = __DIR__.'/../shareasale-files/';
+
+use Symfony\Component\Console\Application;
+
+ini_set("memory_limit", '2G');
+
+$app = new Application('Spiders Console Program', '0.0.1');
+
+foreach ($commands as $cmd) {
+        $cmd = "Spiders\\Commands\\".$cmd;
+        $app->add(new $cmd);
+}
+
+$app->run();

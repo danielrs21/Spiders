@@ -1,0 +1,22 @@
+{
+    "name": "drs/Spiders",
+    "description": "Spiders",
+    "authors": [
+        {
+            "name": "Daniel Rodriguez",
+            "email": "dirs21@gmail.com"
+        }
+    ],
+    "type": "project",
+    "version": "0.0.1",
+    "require": {
+        "facebook/webdriver": "^1.6",
+        "symfony/console": "^3.4",
+        "sunra/php-simple-html-dom-parser": "^1.5",
+        "monolog/monolog": "^1.23"
+    },
+    "autoload": {
+        "psr-0": { "Spiders\\": "src/" }
+        },
+        "classmap": ["src/"]
+}
